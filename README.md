@@ -63,7 +63,7 @@ Use the input `nftPlaceValue` to fix the digit after decimal point
 
 ....
 
-<ng-nft [nftNumber]="12345" [nftPlaceValue]="1"></ng-nft>
+<ng-nft [nftNumber]="12345"></ng-nft>
 <ng-nft [nftNumber]="12345" [nftPlaceValue]="2"></ng-nft>
 <ng-nft [nftNumber]="-12345" [nftPlaceValue]="2"></ng-nft> (Accept negative number)
 
