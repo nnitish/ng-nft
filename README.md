@@ -1,6 +1,77 @@
-# NFormatter
+# Introduction
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+Number Formatter for [Angular](http://angular.io); Transforms the number into human readable format when in Thousands, Millions and Billions.
+* 37474 -> 37.5K
+* 1222130 -> 1.2M
+* 12414770 -> 12.4M
+* 19121364128 -> 19.1B
+
+# Installation
+
+### npm
+```js
+npm install ng-nft --save
+```
+
+# Usage
+
+### Import `NgNftModule`
+
+You need to import the `NgNftModule` in the module of your app where you want to use it.
+
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { NgNftModule } from 'ng-nft';
+
+@NgModule({
+  declarations: [
+    // Your components
+  ],
+  imports: [
+    // Your modules,
+    NgNftModule
+  ],
+  providers: [],
+  bootstrap: []
+})
+export class AppModule { }
+```
+
+### selector
+Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`
+
+```html
+<ng-nft [nftNumber]="12345"></ng-nft>
+
+<ng-nft [nftNumber]="'12345'"></ng-nft>
+```
+
+
+Use the input `nftPlaceValue` to fix the digit after decimal point
+
+```js
+[nftPlaceValue]="" // Optional. The number of digits after the decimal point. Range [0-100]
+```
+```html
+<ng-nft [nftNumber]="12345" [nftPlaceValue]=""></ng-nft>
+<ng-nft [nftNumber]="12345" [nftPlaceValue]="0"></ng-nft>
+
+....
+
+<ng-nft [nftNumber]="12345" [nftPlaceValue]="1"></ng-nft>
+<ng-nft [nftNumber]="12345" [nftPlaceValue]="2"></ng-nft>
+
+...
+```
+
+
+# Demo App
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1. 
+Thus, one can consume the Demo App with in the Repository and can understand the flow of how this Package works.
 
 ## Development server
 
