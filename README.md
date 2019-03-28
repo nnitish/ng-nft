@@ -1,10 +1,12 @@
 # Introduction
 
-Number Formatter for [Angular](http://angular.io); Transforms the number into human readable format when in Thousands, Millions and Billions.
-* 37474 -> 37.5K
-* 1222130 -> 1.2M
-* 12414770 -> 12.4M
-* 19121364128 -> 19.1B
+Number Formatter for [Angular](http://angular.io); Transforms the number into human readable format when in Thousands, Millions and Billions. It accept the negative number also.
+* 12345 -> 12.345K
+* -12345 -> -12.345K (Negative number)
+* 1234567 -> 1.23M
+* 123456789123 -> 123.45B
+
+The number of digits after the decimal point depends on the input value of `[nftPlaceValue]=""`
 
 # Installation
 
@@ -63,6 +65,7 @@ Use the input `nftPlaceValue` to fix the digit after decimal point
 
 <ng-nft [nftNumber]="12345" [nftPlaceValue]="1"></ng-nft>
 <ng-nft [nftNumber]="12345" [nftPlaceValue]="2"></ng-nft>
+<ng-nft [nftNumber]="-12345" [nftPlaceValue]="2"></ng-nft> (Accept negative number)
 
 ...
 ```
