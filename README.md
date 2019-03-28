@@ -43,12 +43,12 @@ export class AppModule { }
 ```
 
 ### selector
-Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`
+Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`. Range [0-100]
 
 ```html
 <ng-nft [nftNumber]="12345"></ng-nft>
 
-<ng-nft [nftNumber]="'12345'"></ng-nft>
+<ng-nft [nftNumber]="'12345'"></ng-nft>  (Accept number as a string format)
 ```
 
 
