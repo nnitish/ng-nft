@@ -6,7 +6,7 @@ Number Formatter for [Angular](http://angular.io); Transforms the number into hu
 * 1234567 -> 1.23M
 * 123456789123 -> 123.45B
 
-The number of digits after the decimal point depends on the input value of `[nftPlaceValue]=""`
+The number of digits after the decimal point depends on the input value of `[nftPlaceValue]=""` Range [0-100]
 
 # Installation
 
@@ -43,7 +43,7 @@ export class AppModule { }
 ```
 
 ### selector
-Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`. Range [0-100]
+Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`.
 
 ```html
 <ng-nft [nftNumber]="12345"></ng-nft>
