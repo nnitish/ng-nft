@@ -2,7 +2,7 @@
   "name": "ng-nft",
   "description": "Angular Number Formatter - formats the number into human readable format when in Thousands, Millions and Billions.",
   "author": "Nitish Kumar",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/nnitish/ng-nft"
@@ -16,7 +16,9 @@
     "ng",
     "nft",
     "ng-nft",
-    "number"
+    "number",
+    "formatter",
+    "number formatter"
   ],
   "scripts": {
     "ng": "ng",
