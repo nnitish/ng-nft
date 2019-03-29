@@ -6,7 +6,8 @@ Number Formatter for [Angular](http://angular.io); Transforms the number into hu
 * 1234567 -> 1.23M
 * 123456789123 -> 123.45B
 
-The number of digits after the decimal point depends on the input value of `[nftPlaceValue]=""` Range [0-100]
+The number of digits after the decimal point depends on the input value of `[nftPlaceValue]=""` Range [0-100].
+It also watch for every input `[nftNumber]="12453"` value changes.
 
 # Installation
 
@@ -43,7 +44,7 @@ export class AppModule { }
 ```
 
 ### selector
-Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`.
+1. Place the `<ng-nft></ng-nft>` selector and pass the un-formatted number as an input to `[nftNumber]=""`. It watch for every input value changes in real time.
 
 ```html
 <ng-nft [nftNumber]="12345"></ng-nft>
@@ -52,7 +53,7 @@ Place the `ng-nft` and pass the un-formatted number as an input to `nftNumber`.
 ```
 
 
-Use the input `nftPlaceValue` to fix the digit after decimal point
+2. Use the input `[nftPlaceValue]=""` to fix the digit after decimal point
 
 ```js
 [nftPlaceValue]="" // Optional. The number of digits after the decimal point. Range [0-100]
@@ -61,11 +62,12 @@ Use the input `nftPlaceValue` to fix the digit after decimal point
 <ng-nft [nftNumber]="12345" [nftPlaceValue]=""></ng-nft>
 <ng-nft [nftNumber]="12345" [nftPlaceValue]="0"></ng-nft>
 
-....
+...
 
 <ng-nft [nftNumber]="12345"></ng-nft>
 <ng-nft [nftNumber]="12345" [nftPlaceValue]="2"></ng-nft>
 <ng-nft [nftNumber]="-12345" [nftPlaceValue]="2"></ng-nft> (Accept negative number)
+<ng-nft [nftNumber]="'-12345'" [nftPlaceValue]="2"></ng-nft> (Accept number as a string format)
 
 ...
 ```
